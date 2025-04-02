@@ -1,0 +1,44 @@
+# controller
+## MainController
+private final HttpSession session
+private String pageName
+private final LoginService ls
+
+private String checkSession(Model model, String pageName)
+private String checkUserSession(Model model, String pageName)
+private String checkDefStSession(Model model, String pageName)
+private void setEnvData(Model model)
+public String goLoginPage(Model model)
+public String getRoot(Model model)
+public String root(Model model, String mode)
+public String goStageSelectPage(Model model)
+
+# service
+## LoginService
+public void setPageInfo(Model model)
+
+# entity
+## DataEntity
+private String sys_user_id
+private String sys_user_mode
+private int sys_user_ev
+private String user_id
+private String user_mail
+private String user_tell
+private String user_name
+private String user_kana_name
+private String user_stage_name
+private String user_stage_kana_name
+private String user_pass
+private String user_def_stage
+private Date user_cre_date
+private Date user_last_login
+private Date user_birthday
+private int user_hide_age
+public void setEntity(String column, String value)
+private Object convertValue(String value, Class<?> targetType)
+
+<関係性>
+MainController > LoginService
+LoginService > DataEntity
+goLoginPage > setPageInfo
