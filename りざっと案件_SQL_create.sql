@@ -1,4 +1,4 @@
-drop schema resat;
+-- drop schema resat;
 create schema resat;
 use resat;
 
