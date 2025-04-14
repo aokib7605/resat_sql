@@ -53,3 +53,22 @@ INSERT INTO stages values(
     'flyer1.jpg',
     'flyer2.jpg'
 );
+
+insert into group_login_list values(
+	'grp001',
+	'abcde12345fghij67890',
+    1,
+    '芸名',
+    1
+);
+
+INSERT INTO groupes VALUES (
+  'grp001', 
+  'nukikugi', 
+  '劇団抜きにくい釘', 
+  'ゲキダンヌキニクイクギ', 
+  'nukikugi2016', 
+  'nukikugi@gmail.com', 
+  '2025-04-01', 
+  '2025-05-01'
+)
