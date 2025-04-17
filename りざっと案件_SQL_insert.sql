@@ -33,7 +33,8 @@ insert into users values (
     '20250315',
     '20250315',
     '19900101',
-    1
+    1,
+    null
     );
 
 INSERT INTO stages values(
@@ -51,7 +52,8 @@ INSERT INTO stages values(
     '2025-04-10',
     1,
     'flyer1.jpg',
-    'flyer2.jpg'
+    'flyer2.jpg',
+    '大阪府寝屋川市石津元町11-10'
 );
 
 insert into group_login_list values(

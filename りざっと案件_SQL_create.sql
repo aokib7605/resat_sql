@@ -81,6 +81,7 @@ create table stages (
     stage_opener int,
     stage_flyer_1 varchar(64),
     stage_flyer_2 varchar(64),
+    stage_place_address varchar(128),
     primary key (sys_stage_id, stage_id)
     );
 
@@ -128,6 +129,7 @@ create table users (
     user_last_login date,
     user_birthday date,
     user_hide_age int,
+    user_def_group varchar(20),
     primary key(sys_user_id, user_id, user_mail)
     );
 
