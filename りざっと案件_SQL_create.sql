@@ -7,8 +7,8 @@ create table stage_login_list (
 	sys_stage_id varchar(20),
     sys_user_id varchar(20),
     stage_authority int,
-    cast_table_id varchar(20),
-    staff_table_id varchar(20),
+    cast_table_id varchar(128),
+    staff_table_id varchar(128),
     primary key (sys_stage_id, sys_user_id)
     );
 
@@ -18,19 +18,15 @@ create table stage_authorities (
     );
 
 create table cast_abcde12345fghij67890 (
-	cast_table_id varchar(20),
     sys_user_id varchar(20),
     cast_chara_name varchar(64),
-    cast_sort_num int,
-    primary key (cast_table_id)
+    cast_sort_num int
     );
 
 create table staff_abcde12345fghij67890 (
-	staff_table_id varchar(20),
     sys_user_id varchar(20),
     staff_dep_name varchar(64),
-    staff_sort_num int,
-    primary key (staff_table_id)
+    staff_sort_num int
     );
 
 create table dates_abcde12345fghij67890 (
@@ -147,3 +143,11 @@ create table transactions (
     tra_discount int,
     primary key(sys_tra_id)
     );
+
+create table images (
+	sys_image_id varchar(20),
+    file_name varchar(255) NOT NULL,
+    file_type varchar(255) NOT NULL,
+    binary_data longblob NOT NULL,
+    PRIMARY KEY (`sys_image_id`)
+	);

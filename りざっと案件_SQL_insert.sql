@@ -1,25 +1,8 @@
-create table stages (
-	sys_stage_id varchar(20),
-    sys_group_id varchar(20),
-    stage_id varchar(20),
-    stage_pass varchar(20),
-    stage_name varchar(64),
-    stage_attract_customers int,
-    stage_url_title varchar(64),
-    stage_place_name varchar(64),
-    stage_open_minutes varchar(64),
-    stage_runtime varchar(20),
-    stage_story varchar(400),
-    stage_cre_date date,
-    stage_opener int,
-    stage_flyer_1 varchar(64),
-    stage_flyer_2 varchar(64),
-    primary key (sys_stage_id, stage_id)
-    );
+
 
 insert into users values (
 	'abcde12345fghij67890',
-    'double',
+    'doubleUser',
     0,
     'test_user',
     'test@test.com',
@@ -34,7 +17,7 @@ insert into users values (
     '20250315',
     '19900101',
     1,
-    null
+    'abcde12345fghij67890'
     );
 
 INSERT INTO stages values(
@@ -73,4 +56,7 @@ INSERT INTO groupes VALUES (
   'nukikugi@gmail.com', 
   '2025-04-01', 
   '2025-05-01'
-)
+);
+
+insert into stage_login_list values
+('abcde12345fghij67890', 'abcde12345fghij67890', '1', 'cast_abcde12345fghij67890', 'staff_abcde12345fghij67890');
