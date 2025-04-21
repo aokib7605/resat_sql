@@ -1,4 +1,8 @@
-
+INSERT INTO group_authorities (authority_id, authority_name) VALUES
+(1, '管理者'),
+(2, '票券管理者'),
+(3, '一般'),
+(4, '閲覧');
 
 insert into users values (
 	'abcde12345fghij67890',
