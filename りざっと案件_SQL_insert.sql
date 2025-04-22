@@ -4,6 +4,12 @@ INSERT INTO group_authorities (authority_id, authority_name) VALUES
 (3, '一般'),
 (4, '閲覧');
 
+INSERT INTO stage_authorities (authority_id, authority_name) VALUES
+(1, '管理者'),
+(2, '票券管理者'),
+(3, '一般'),
+(4, '閲覧');
+
 insert into users values (
 	'abcde12345fghij67890',
     'doubleUser',
@@ -63,4 +69,4 @@ INSERT INTO groupes VALUES (
 );
 
 insert into stage_login_list values
-('abcde12345fghij67890', 'abcde12345fghij67890', '1', 'cast_abcde12345fghij67890', 'staff_abcde12345fghij67890');
+('abcde12345fghij67890', 'abcde12345fghij67890', '1');

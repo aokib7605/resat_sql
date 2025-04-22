@@ -7,8 +7,6 @@ create table stage_login_list (
 	sys_stage_id varchar(20),
     sys_user_id varchar(20),
     stage_authority int,
-    cast_table_id varchar(128),
-    staff_table_id varchar(128),
     primary key (sys_stage_id, sys_user_id)
     );
 
