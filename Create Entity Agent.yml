@@ -1,0 +1,93 @@
+app:
+  description: Java の Entity を作成する（Spring boot）
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: agent-chat
+  name: Create Entity Agent
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai:0.0.15@5f610705111ac49d93c4ea5eaac690abaeb3b4a87599c48e5165b549b4c47f10
+kind: app
+model_config:
+  agent_mode:
+    enabled: true
+    max_iteration: 5
+    prompt: null
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets: []
+    reranking_enable: false
+    retrieval_model: multiple
+    top_k: 4
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .MPGA
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gpt-4
+    provider: langgenius/openai/openai
+  more_like_this:
+    enabled: false
+  opening_statement: ''
+  pre_prompt: "<constraints>\n- You must use Japanese.\n- You create only variable\
+    \ declaration section to create a Java Spring boot entity class based on the mySQL\
+    \ table creation information entered by the user. by the user. The variable names\
+    \ must match the sql column names exactly. No annotations or class names are required.\n\
+    - You create the method by applying the column names in the mySQL table creation\
+    \ information entered by the user to the <template> below.\n<template>\n\tpublic\
+    \ List<String> getStaff_sysStageIdTableColumns(){ \n\t\tList<String> columns =\
+    \ new ArrayList<String>(Arrays.asList(\n\t\t\t\t“column name”,. \n\n\t\t\t\t)));\n\
+    \t\treturn columns; }\n\t}"
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.1.5
