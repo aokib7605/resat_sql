@@ -59,7 +59,7 @@ model_config:
     completion_params:
       stop: []
     mode: chat
-    name: gpt-4
+    name: gpt-4o-mini
     provider: langgenius/openai/openai
   more_like_this:
     enabled: false
@@ -69,10 +69,10 @@ model_config:
     \ table creation information entered by the user. by the user. The variable names\
     \ must match the sql column names exactly. No annotations or class names are required.\n\
     - You create the method by applying the column names in the mySQL table creation\
-    \ information entered by the user to the <template> below.\n<template>\n\tpublic\
-    \ List<String> getStaff_sysStageIdTableColumns(){ \n\t\tList<String> columns =\
-    \ new ArrayList<String>(Arrays.asList(\n\t\t\t\t“column name”,. \n\n\t\t\t\t)));\n\
-    \t\treturn columns; }\n\t}"
+    \ information entered by the user to the <template> below and recreate method\
+    \ name by table name.\n<template>\n\tpublic List<String> getStaff_sysStageIdTableColumns(){\
+    \ \n\t\tList<String> columns = new ArrayList<String>(Arrays.asList(\n\t\t\t\t\
+    “column name”,. \n\n\t\t\t\t)));\n\t\treturn columns; }\n\t}"
   prompt_type: simple
   retriever_resource:
     enabled: true

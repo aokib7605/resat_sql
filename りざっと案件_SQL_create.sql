@@ -27,8 +27,9 @@ create table staff_abcde12345fghij67890 (
     staff_sort_num int
     );
 
-create table dates_abcde12345fghij67890 (
+create table dates (
 	sys_date_id varchar(20),
+    sys_stage_id varchar(20),
     st_date date,
     st_seat int,
     st_info varchar(128),
@@ -48,15 +49,17 @@ create table forms (
 	sys_form_id varchar(20),
     sys_stage_id varchar(20),
 	form_name varchar(64),
-    date_st date,
-    date_ed date,
+    date_st DATETIME ,
+    date_ed DATETIME ,
     primary key (sys_form_id)
     );
+-- drop table forms;
 
 create table formset (
 	sys_stage_id varchar(20),
 	sys_form_id varchar(20),
-    sys_ticket_id varchar(20)
+    sys_ticket_id varchar(20),
+    sys_date_id varchar(20)
     );
 
 create table stages (
@@ -147,5 +150,8 @@ create table images (
     file_name varchar(255) NOT NULL,
     file_type varchar(255) NOT NULL,
     binary_data longblob NOT NULL,
+    sys_any_id varchar(20),
+    content_type varchar(64),
     PRIMARY KEY (`sys_image_id`)
 	);
+-- drop table images;
