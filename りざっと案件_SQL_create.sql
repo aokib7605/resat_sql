@@ -15,22 +15,30 @@ create table stage_authorities (
     authority_name varchar(64)
     );
 
-create table cast_abcde12345fghij67890 (
-    sys_user_id varchar(20),
+create table cast (
+	sys_cast_id varchar(20),
+	sys_stage_id varchar(20),
     cast_chara_name varchar(64),
-    cast_sort_num int
-    );
-
-create table staff_abcde12345fghij67890 (
     sys_user_id varchar(20),
-    staff_dep_name varchar(64),
-    staff_sort_num int
+    cast_sort_num int,
+    user_sort_num int
     );
+-- drop table cast;
+
+create table staff (
+	sys_staff_id varchar(20),
+	sys_stage_id varchar(20),
+    staff_dep_name varchar(64),
+    sys_user_id varchar(20),
+    staff_sort_num int,
+    user_sort_num int
+    );
+-- drop table staff;
 
 create table dates (
 	sys_date_id varchar(20),
     sys_stage_id varchar(20),
-    st_date date,
+    st_date datetime,
     st_seat int,
     st_info varchar(128),
     primary key (sys_date_id)
