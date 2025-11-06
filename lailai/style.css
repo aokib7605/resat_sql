@@ -1,0 +1,138 @@
+/* リセット */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  background: linear-gradient(#e0f3f7, #cfe2e7);
+  padding: 1em;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.5em;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 4em;
+}
+
+#submitBtn {
+  width: 100%;
+  background: #c0256c;
+  color: white;
+  border: none;
+  padding: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+#submitBtn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+#ticketPrice {
+  font-size: 0.9em;
+  color: #444;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+#completeMessage {
+  text-align: center;
+  font-size: 1.1em;
+  color: #1a3c3e;
+  margin-top: 2em;
+  padding: 1em;
+  background: #d1f0dd;
+  border-radius: 10px;
+}
+
+/* ===== レスポンシブ（PC拡張） ===== */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 700px;
+    padding: 2.5em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  input, select, textarea {
+    font-size: 1.1em;
+  }
+
+  #submitBtn {
+    font-size: 1.2em;
+  }
+}
+
+#confirmSection {
+  background: #f5f5f5;
+  padding: 1.5em;
+  border-radius: 10px;
+  font-size: 0.95em;
+}
+
+#confirmContent p {
+  margin-bottom: 0.8em;
+}
+
+#accountNotice {
+  margin-top: 1em;
+  font-size: 0.9em;
+  background: #eef;
+  padding: 0.8em;
+  border-radius: 6px;
+}
+
+#confirmBackBtn, #confirmSubmitBtn, #loginAccountBtn {
+  background: #c0256c;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  margin: 0.5em 0.3em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#loginAccountBtn {
+  background: #3a6bbd;
+}

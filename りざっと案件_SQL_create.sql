@@ -87,6 +87,7 @@ create table stages (
     stage_flyer_1 varchar(64),
     stage_flyer_2 varchar(64),
     stage_place_address varchar(128),
+    disabledUrlBtnFlag tinyint,
     primary key (sys_stage_id, stage_id)
     );
 
@@ -135,6 +136,7 @@ create table users (
     user_birthday date,
     user_hide_age int,
     user_def_group varchar(20),
+    deleteFlg boolean,
     primary key(sys_user_id, user_id, user_mail)
     );
 
@@ -150,8 +152,10 @@ create table transactions (
     tra_cre_date date,
     tra_comment varchar(400),
     tra_discount int,
+    no_login varchar(6),
     primary key(sys_tra_id)
     );
+-- drop table transactions;
 
 create table images (
 	sys_image_id varchar(20),
@@ -163,3 +167,13 @@ create table images (
     PRIMARY KEY (`sys_image_id`)
 	);
 -- drop table images;
+
+create table none_users (
+	sys_none_user_id varchar(20),
+    none_user_name varchar(64),
+    none_user_kana_name varchar(20),
+    none_user_mail varchar(64),
+    none_user_tell varchar(20),
+    primary key(sys_none_user_id)
+	);
+--  drop table none_users;

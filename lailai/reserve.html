@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>來來尸來 004便特設サイト</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>來來尸來 004便 予約フォーム</h1>
+
+        <form id="reserveForm">
+            <input type="hidden" name="sys_stage_id" value="io4qwamgtlj26lnpcy0i">
+            <input type="hidden" name="sys_form_id" value="io4qwamgtlj26lnpcy0i">
+            <label>お名前（必須）
+                <input type="text" name="user_name" required>
+            </label>
+
+            <label>フリガナ（必須）
+                <input type="text" name="user_kana_name" required>
+            </label>
+
+            <label>ご希望日時（必須）
+                <select name="sys_date_id" id="dateSelect" required>
+                    <option value="">全ての予約が終了しました</option>
+                </select>
+            </label>
+
+            <label>チケット種類（必須）
+                <select name="sys_ticket_id" id="ticketSelect" required>
+                    <option value="">選択してください</option>
+                </select>
+            </label>
+
+            <p id="ticketPrice"></p>
+
+            <label>枚数（必須）
+                <select name="tra_amount" required>
+                    <option value="">選択してください</option>
+                    <option value="1">1枚</option>
+                    <option value="2">2枚</option>
+                </select>
+            </label>
+            <p id="ticketPrice"></p>
+
+            <label>コメント（任意）
+                <textarea name="tra_comment" placeholder="ご要望があればご記入ください"></textarea>
+            </label>
+
+            <label>メールアドレス（必須）
+                <input type="email" name="user_mail" required>
+            </label>
+
+            <label>ご連絡先電話番号（必須）
+                <input type="tel" name="user_tell" required>
+            </label>
+
+            <button type="button" id="submitBtn">予約内容確定</button>
+        </form>
+
+        <!-- 確認画面 -->
+        <div id="confirmSection" style="display:none;">
+            <h2>予約内容確認</h2>
+            <div id="confirmContent"></div>
+
+            <!-- <p id="accountNotice">Grobeアカウントはお持ちですか？<br>
+                Grobeアカウントにログインすれば、本サービスで予約した公演情報がマイページからご確認いただけるようになります。</p>
+
+            <button id="loginAccountBtn">grobeアカウントにログイン・新規作成</button> -->
+            <div style="margin-top:1em;">
+                <button id="confirmBackBtn">戻る</button>
+                <button id="confirmSubmitBtn">確定</button>
+            </div>
+        </div>
+
+        <div id="completeMessage" style="display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
